@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "assets/styles/tailwind.css";
+import "flowbite";
 
 // layouts
 
@@ -16,7 +17,13 @@ import Landing from "views/Landing.js";
 import Profile from "views/Profile.js";
 import Index from "views/Index.js";
 
+// import { Provider as ReduxProvider } from "react-redux";
+// import { PersistGate } from "redux-persist/integration/react";
+// import { store, persistor } from "./redux";
+
 ReactDOM.render(
+  // <ReduxProvider store={store}>
+  //   <PersistGate persistor={persistor}>
   <BrowserRouter>
     <Switch>
       {/* add routes with layouts */}
@@ -30,5 +37,7 @@ ReactDOM.render(
       <Redirect from="*" to="/" />
     </Switch>
   </BrowserRouter>,
+  //   </PersistGate>
+  // </ReduxProvider>
   document.getElementById("root")
 );

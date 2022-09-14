@@ -13,6 +13,7 @@ module.exports = {
       "./src/*.html",
       "./public/**/*.js",
       "./public/*.js",
+      "./node_modules/flowbite/**/*.js",
     ],
     options: {
       safelist: [],
@@ -99,6 +100,7 @@ module.exports = {
     "disabled",
   ],
   plugins: [
+    require("flowbite/plugin"),
     require("@tailwindcss/forms"),
     plugin(function ({ addComponents, theme }) {
       const screens = theme("screens", {});
