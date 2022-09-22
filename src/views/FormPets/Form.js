@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import TransmisionEnVivo from "./TransmisionEnVivo";
 import WizardFormEightPage from "./WizardFormEightPage";
 import WizardFormFirstPage from "./WizardFormFirstPage";
 import WizardFormFivePage from "./WizardFormFivePage";
@@ -86,6 +87,7 @@ export default function FormPet() {
                     previousPage={previus}
                   />
                 )}
+                {page === 10 && <TransmisionEnVivo />}
               </div>
             </div>
           </div>
